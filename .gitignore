@@ -1,0 +1,15 @@
+# Modules
+node_modules
+
+# vscode settings
+# .vscode
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore build output
+build/**/*
+
+# Ignore coverage data
+coverage
