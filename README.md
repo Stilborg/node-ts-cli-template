@@ -21,6 +21,8 @@ Node version is controlled using nvm, check .nvmrc file for correct version
 
 `npm run start`
 
+`Endpoint is at: http://localhost:4001/geo/find-nearest-intersection?latitude=38.906714&longitude=-122.569683`
+
 If you are using vs-code, my .vscode folder is in the repo
 
 ### settings.json for reference
