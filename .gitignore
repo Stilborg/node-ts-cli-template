@@ -9,7 +9,7 @@ node_modules
 Thumbs.db
 
 # Ignore build output
-build/**/*
+lib/**/*
 
 # Ignore coverage data
 coverage

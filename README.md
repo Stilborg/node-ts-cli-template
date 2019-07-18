@@ -1,7 +1,7 @@
-# Node Typescript Template
+# Node Typescript CLI Template
 
 ## Shoulders
-This project is created from on articles and examples by [Jeroenouw](https://github.com/jeroenouw)
+This project is created from articles and examples by [Jeroenouw](https://github.com/jeroenouw)
 
 ## Installation
 

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /* eslint-disable */
 
-const chalk = require('chalk');
+import chalk from 'chalk';
 const clear = require('clear');
 const figlet = require('figlet');
-const path = require('path');
-const program = require('commander');
+// const path = require('path');
+import program from 'commander';
 
 clear();
 console.log(
