@@ -1,40 +1,42 @@
 {
-  "name": "codingtest",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "node-ts-cli-template",
+  "version": "0.0.1",
+  "description": "A CLI template project",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "jest -i --env=node --colors --coverage test",
-    "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}' --quiet --fix",
-    "start": "npm run build:dev",
+    "unit": "jest -i --env=node --colors --coverage test",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build && npm run test",
     "build": "tsc -p .",
-    "build:dev": "nodemon --watch 'src/**/*.ts' --exec 'tsc -p . && node --inspect -r ts-node/register' src/index.ts"
+    "test": "npm i -g && cli",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
   },
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "pizza",
+    "typescript",
+    "nodejs"
+  ],
   "author": "Claus Stilborg",
   "license": "MIT",
-  "devDependencies": {
-    "@types/express": "^4.17.0",
-    "@types/jest": "^24.0.15",
-    "@types/node": "^12.0.12",
-    "@types/supertest": "^2.0.8",
-    "jest": "^24.8.0",
-    "nodemon": "^1.19.1",
-    "supertest": "^4.0.2",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.2"
+  "bin": {
+    "cli": "./lib/index.js"
   },
   "dependencies": {
-    "@turf/nearest-point-to-line": "^6.0.0",
-    "@turf/point-to-line-distance": "^6.0.0",
-    "@turf/turf": "^5.1.6",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "^6.0.1",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "express": "^4.17.1",
-    "prettier": "^1.18.2"
+    "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "commander": "^2.19.0",
+    "figlet": "^1.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^10.12.10",
+    "jest": "^24.8.0",
+    "nodemon": "^1.18.7",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
   }
 }
